@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Sparkles, Users, BookOpen, Shield } from "lucide-react";
@@ -48,12 +49,14 @@ export function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
+                asChild
                 size="lg"
                 className="bg-[#0D9488] hover:bg-[#0A7B71] text-white font-semibold px-8 py-6 text-lg transition-all hover:scale-105 shadow-lg shadow-[#0D9488]/30"
-                onClick={() => scrollToSection("pricing")}
               >
-                {t("hero.cta")}
-                <Arrow className="w-5 h-5 ms-2" />
+                <Link href="/register">
+                  {t("hero.cta")}
+                  <Arrow className="w-5 h-5 ms-2" />
+                </Link>
               </Button>
               <Button
                 size="lg"

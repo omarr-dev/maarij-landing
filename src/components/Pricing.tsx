@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Crown } from "lucide-react";
@@ -91,10 +92,11 @@ export function Pricing() {
 
               {/* CTA */}
               <Button
+                asChild
                 size="lg"
                 className="w-full bg-[#0D9488] hover:bg-[#0A7B71] text-white font-semibold py-6 transition-all hover:scale-[1.02]"
               >
-                {t("pricing.basic.cta")}
+                <Link href="/register">{t("pricing.basic.cta")}</Link>
               </Button>
             </div>
           </div>

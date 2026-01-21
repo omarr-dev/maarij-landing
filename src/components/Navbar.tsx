@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
@@ -82,10 +83,10 @@ export function Navbar() {
 
             {/* CTA Button - Desktop */}
             <Button
+              asChild
               className="hidden md:flex bg-[#0D9488] hover:bg-[#0A7B71] text-white font-semibold px-6 transition-all hover:scale-105"
-              onClick={() => scrollToSection("pricing")}
             >
-              {t("nav.cta")}
+              <Link href="/register">{t("nav.cta")}</Link>
             </Button>
 
             {/* Mobile Menu Button */}
@@ -126,10 +127,10 @@ export function Navbar() {
               {t("nav.pricing")}
             </button>
             <Button
+              asChild
               className="w-full bg-[#0D9488] hover:bg-[#0A7B71] text-white font-semibold py-3 transition-all"
-              onClick={() => scrollToSection("pricing")}
             >
-              {t("nav.cta")}
+              <Link href="/register">{t("nav.cta")}</Link>
             </Button>
           </div>
         </div>
