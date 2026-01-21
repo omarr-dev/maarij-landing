@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { BookOpen, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   const { t, language } = useLanguage();
@@ -22,8 +22,12 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[#0D9488] rounded-xl flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                <img 
+                  src="/maarij_favicon.svg" 
+                  alt="Maarij Logo" 
+                  className="w-12 h-12"
+                />
               </div>
               <span
                 className="text-2xl font-bold"

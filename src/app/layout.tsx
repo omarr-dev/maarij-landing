@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Maarij" }],
   creator: "Maarij",
+  icons: {
+    icon: "/maarij_favicon.svg",
+    shortcut: "/maarij_favicon.svg",
+    apple: "/maarij_favicon.svg",
+  },
   openGraph: {
     title: "معارج | المنصة الاحترافية لإدارة حلقات تحفيظ القرآن الكريم",
     description:
