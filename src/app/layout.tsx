@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cairo, Noto_Sans_Arabic } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
         className={`${cairo.variable} ${notoSansArabic.variable} antialiased`}
       >
         <LanguageProvider>{children}</LanguageProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
