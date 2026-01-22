@@ -27,7 +27,7 @@ const translations = {
     "hero.secondaryCta": "تعرف على المميزات",
 
     // Features
-    "features.title": "مميزات تطوّر من حلقاتك",
+    "features.title": "مميزات تطوّر",
     "features.subtitle": "كل ما تحتاجه لإدارة حلقاتك باحترافية",
     "features.branding.title": "تخصيص كامل للهوية البصرية ونطاق خاص",
     "features.branding.desc": "خصّص ألوان وشعار منصتك بما يتناسب مع هوية جمعيتك",
