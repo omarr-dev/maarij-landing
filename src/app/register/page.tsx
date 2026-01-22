@@ -299,19 +299,6 @@ export default function RegisterPage() {
                 <p className="text-gray-600">{t("register.pageSubtitle")}</p>
               </div>
 
-              {/* Error Alert */}
-              {submitError && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3 animate-fade-in">
-                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-medium text-red-800">
-                      {t("register.error.title")}
-                    </p>
-                    <p className="text-sm text-red-600 mt-1">{submitError}</p>
-                  </div>
-                </div>
-              )}
-
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Association Information Section */}
                 <div>
@@ -539,6 +526,19 @@ export default function RegisterPage() {
                   </div>
                 </div>
 
+                {/* Error Alert */}
+                {submitError && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3 animate-fade-in">
+                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium text-red-800">
+                        {t("register.error.title")}
+                      </p>
+                      <p className="text-sm text-red-600 mt-1">{submitError}</p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Submit Button */}
                 <Button
                   type="submit"
@@ -587,25 +587,25 @@ export default function RegisterPage() {
                 </ul>
               </div>
 
-              {/* Stats Card */}
+              {/* Features Card */}
               <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="p-4 bg-[#F1F5F9] rounded-xl">
-                    <div className="text-2xl font-bold text-[#0D9488]">+١٠٠</div>
+                    <div className="text-2xl font-bold text-[#0D9488]">🚀</div>
                     <div className="text-sm text-gray-600">
-                      {language === "ar" ? "جمعية" : "Associations"}
+                      {language === "ar" ? "إطلاق فوري" : "Instant Launch"}
                     </div>
                   </div>
                   <div className="p-4 bg-[#F1F5F9] rounded-xl">
-                    <div className="text-2xl font-bold text-[#0D9488]">+٥٠٠٠</div>
+                    <div className="text-2xl font-bold text-[#0D9488]">∞</div>
                     <div className="text-sm text-gray-600">
-                      {language === "ar" ? "طالب" : "Students"}
+                      {language === "ar" ? "طلاب غير محدود" : "Unlimited Students"}
                     </div>
                   </div>
                   <div className="p-4 bg-[#F1F5F9] rounded-xl">
-                    <div className="text-2xl font-bold text-[#D4AF37]">٩٩٪</div>
+                    <div className="text-2xl font-bold text-[#D4AF37]">🎁</div>
                     <div className="text-sm text-gray-600">
-                      {language === "ar" ? "رضا العملاء" : "Satisfaction"}
+                      {language === "ar" ? "مجاني بالكامل" : "Completely Free"}
                     </div>
                   </div>
                   <div className="p-4 bg-[#F1F5F9] rounded-xl">

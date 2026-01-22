@@ -36,7 +36,9 @@ const translations = {
     "features.management.title": "إدارة شاملة للحلقات والطلاب والمعلمين",
     "features.management.desc": "تابع تقدم الطلاب وأداء المعلمين من لوحة تحكم واحدة",
     "features.parents.title": "إشراك ولي الأمر في المنظومة التعليمية",
-    "features.parents.desc": "تواصل مباشر مع أولياء الأمور وتقارير دورية عن تقدم أبنائهم",
+    "features.parents.desc": "رسائل واتساب تلقائية لأولياء الأمور وتقارير دورية عن تقدم أبنائهم",
+    "features.planning.title": "تخطيط المنهج وتتبع الإنجاز",
+    "features.planning.desc": "ضع خططاً وأهدافاً للطلاب وتابع تقدمهم وإنجازاتهم يومياً مع تقارير شاملة",
     "features.custom.title": "إمكانية إضافة وتخصيص أي ميزة",
     "features.custom.desc": "نظام مرن يتكيف مع احتياجات جمعيتك الخاصة",
 
@@ -93,7 +95,7 @@ const translations = {
 
     // Registration Page
     "register.pageTitle": "سجّل جمعيتك",
-    "register.pageSubtitle": "انضم إلى مئات الجمعيات التي تستخدم معارج لإدارة حلقاتها",
+    "register.pageSubtitle": "كن من أوائل الجمعيات التي تنضم لمنصة معارج",
     "register.associationInfo": "معلومات الجمعية",
     "register.managerInfo": "معلومات المشرف الرئيسي",
     "register.associationName": "اسم الجمعية",
@@ -166,6 +168,8 @@ const translations = {
     "features.management.desc": "Track student progress and teacher performance from a single dashboard",
     "features.parents.title": "Parent Involvement in the Educational System",
     "features.parents.desc": "Direct communication with parents and periodic reports on their children's progress",
+    "features.planning.title": "Curriculum Planning & Achievement Tracking",
+    "features.planning.desc": "Set plans and goals for students and track their daily progress and achievements with comprehensive reports",
     "features.custom.title": "Ability to Add and Customize Any Feature",
     "features.custom.desc": "A flexible system that adapts to your association's specific needs",
 
@@ -222,7 +226,7 @@ const translations = {
 
     // Registration Page
     "register.pageTitle": "Register Your Association",
-    "register.pageSubtitle": "Join hundreds of associations using Maarij to manage their circles",
+    "register.pageSubtitle": "Be among the first associations to join Maarij platform",
     "register.associationInfo": "Association Information",
     "register.managerInfo": "Main Supervisor Information",
     "register.associationName": "Association Name",
