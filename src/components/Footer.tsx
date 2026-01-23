@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -119,20 +120,20 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-6">{t("footer.legal")}</h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/privacy"
                   className="text-gray-400 hover:text-[#0D9488] transition-colors"
                 >
                   {t("footer.privacy")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/terms"
                   className="text-gray-400 hover:text-[#0D9488] transition-colors"
                 >
                   {t("footer.terms")}
-                </a>
+                </Link>
               </li>
               <li className="text-gray-400">
                 {t("footer.cr")}: <span dir="ltr">{t("footer.crNumber")}</span>
