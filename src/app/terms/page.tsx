@@ -15,6 +15,7 @@ import {
   CreditCard,
   RefreshCw,
   ShieldCheck,
+  Shield,
   MessageSquare
 } from "lucide-react";
 
