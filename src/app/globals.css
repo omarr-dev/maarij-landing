@@ -1,5 +1,4 @@
-/* Import Google Fonts - Must be at the very top */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -252,6 +251,7 @@ html {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Draw line animation */

@@ -31,16 +31,16 @@ export function Hero() {
       />
       
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 end-10 w-[500px] h-[500px] bg-gradient-to-br from-[#0D9488]/15 to-transparent rounded-full blur-3xl animate-float" style={{ animationDuration: "8s" }} />
-        <div className="absolute bottom-20 start-10 w-[600px] h-[600px] bg-gradient-to-br from-[#D4AF37]/10 to-transparent rounded-full blur-3xl animate-float" style={{ animationDuration: "10s", animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-[#0D9488]/5 to-transparent rounded-full blur-3xl" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 end-10 w-[500px] h-[500px] bg-gradient-to-br from-[#0D9488]/15 to-transparent rounded-full blur-3xl animate-float hidden md:block" style={{ animationDuration: "8s" }} />
+        <div className="absolute bottom-20 start-10 w-[600px] h-[600px] bg-gradient-to-br from-[#D4AF37]/10 to-transparent rounded-full blur-3xl animate-float hidden md:block" style={{ animationDuration: "10s", animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-[#0D9488]/5 to-transparent rounded-full blur-3xl hidden md:block" />
         
         {/* Small floating particles */}
-        <div className="absolute top-32 start-[20%] w-3 h-3 bg-[#0D9488]/30 rounded-full animate-float" style={{ animationDelay: "0s" }} />
-        <div className="absolute top-48 end-[30%] w-2 h-2 bg-[#D4AF37]/40 rounded-full animate-float" style={{ animationDelay: "1s" }} />
-        <div className="absolute bottom-48 start-[40%] w-4 h-4 bg-[#0D9488]/20 rounded-full animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-32 end-[20%] w-2 h-2 bg-[#D4AF37]/30 rounded-full animate-float" style={{ animationDelay: "3s" }} />
+        <div className="absolute top-32 start-[20%] w-3 h-3 bg-[#0D9488]/30 rounded-full animate-float hidden sm:block" style={{ animationDelay: "0s" }} />
+        <div className="absolute top-48 end-[30%] w-2 h-2 bg-[#D4AF37]/40 rounded-full animate-float hidden sm:block" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-48 start-[40%] w-4 h-4 bg-[#0D9488]/20 rounded-full animate-float hidden sm:block" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-32 end-[20%] w-2 h-2 bg-[#D4AF37]/30 rounded-full animate-float hidden sm:block" style={{ animationDelay: "3s" }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
