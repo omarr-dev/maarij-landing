@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Palette, Shield, Users, Heart, Puzzle, Sparkles, Target } from "lucide-react";
 
@@ -178,12 +179,15 @@ export function Features() {
                   </p>
                   
                   {/* Learn More Link */}
-                  <div className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3 ${feature.featured ? 'text-[#D4AF37]' : 'text-[#0D9488]'}`}>
+                  <Link 
+                    href="/register" 
+                    className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3 ${feature.featured ? 'text-[#D4AF37] hover:text-[#F0D78C]' : 'text-[#0D9488] hover:text-[#0A7B71]'}`}
+                  >
                     <span>{language === "ar" ? "اعرف المزيد" : "Learn more"}</span>
                     <svg className={`w-4 h-4 transition-transform ${language === "ar" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -195,7 +199,7 @@ export function Features() {
           <p className="text-gray-500 mb-4">
             {language === "ar" ? "والمزيد من المميزات الحصرية..." : "And many more exclusive features..."}
           </p>
-          <a 
+          <Link 
             href="#pricing" 
             className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg shadow-gray-900/20"
           >
@@ -203,7 +207,7 @@ export function Features() {
             <svg className={`w-5 h-5 ${language === "ar" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
