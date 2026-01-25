@@ -6,6 +6,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 const GA_MEASUREMENT_ID = "G-2JRB37TX1S";
+const GOOGLE_ADS_ID = "AW-17902349140";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -74,6 +75,19 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+        {/* Google Ads (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
       </head>
