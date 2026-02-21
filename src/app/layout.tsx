@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo, Noto_Sans_Arabic } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -101,6 +102,7 @@ export default function RootLayout({
       >
         <LanguageProvider>{children}</LanguageProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
