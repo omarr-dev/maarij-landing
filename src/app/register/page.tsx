@@ -4,6 +4,7 @@ import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -563,30 +564,11 @@ export default function RegisterPage() {
                 </div>
               </div>
 
-              {/* Testimonial */}
-              <div className="mt-6 bg-[#FEF9E7] border border-[#D4AF37]/30 rounded-2xl p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#D4AF37]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">💬</span>
-                  </div>
-                  <div>
-                    <p className="text-gray-700 leading-relaxed mb-3">
-                      {language === "ar"
-                        ? '"منصة معارج غيّرت طريقة إدارتنا للحلقات بشكل كامل. أصبح كل شيء منظماً وسهلاً."'
-                        : '"Maarij platform completely changed how we manage our circles. Everything is now organized and easy."'}
-                    </p>
-                    <p className="text-sm font-medium text-[#0D9488]">
-                      {language === "ar"
-                        ? "— أحمد محمد، مشرف جمعية"
-                        : "— Ahmed Mohamed, Association Supervisor"}
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

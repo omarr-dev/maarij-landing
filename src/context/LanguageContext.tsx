@@ -57,7 +57,7 @@ const translations = {
     "pricing.subtitle": "اختر الباقة المناسبة لاحتياجات جمعيتك",
     "pricing.basic.name": "أساسي",
     "pricing.basic.price": "مجاني",
-    "pricing.basic.period": "لأول شركاء النجاح",
+    "pricing.basic.period": "مجاناً دائماً",
     "pricing.basic.cta": "ابدأ الآن",
     "pricing.basic.feature1": "إدارة شاملة للحلقات",
     "pricing.basic.feature2": "موقع للمعلمين والمشرفين",
@@ -95,7 +95,7 @@ const translations = {
 
     // Registration Page
     "register.pageTitle": "سجّل جمعيتك",
-    "register.pageSubtitle": "كن من أوائل الجمعيات التي تنضم لمنصة معارج",
+    "register.pageSubtitle": "انضم إلى الجمعيات الرائدة على منصة معارج",
     "register.associationInfo": "معلومات الجمعية",
     "register.managerInfo": "معلومات المشرف الرئيسي",
     "register.associationName": "اسم الجمعية",
@@ -188,7 +188,7 @@ const translations = {
     "pricing.subtitle": "Choose the plan that fits your association's needs",
     "pricing.basic.name": "Basic",
     "pricing.basic.price": "Free",
-    "pricing.basic.period": "For Early Success Partners",
+    "pricing.basic.period": "Always Free",
     "pricing.basic.cta": "Start Now",
     "pricing.basic.feature1": "Comprehensive circle management",
     "pricing.basic.feature2": "Portal for teachers and supervisors",
@@ -226,7 +226,7 @@ const translations = {
 
     // Registration Page
     "register.pageTitle": "Register Your Association",
-    "register.pageSubtitle": "Be among the first associations to join Maarij platform",
+    "register.pageSubtitle": "Join the leading associations on Maarij platform",
     "register.associationInfo": "Association Information",
     "register.managerInfo": "Main Supervisor Information",
     "register.associationName": "Association Name",
