@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEffect, useRef } from "react";
 
 // Tenant logos live in /public/logos. `alt` is what screen readers announce.
 // To add a tenant: drop the file in public/logos and add a line here.
@@ -9,9 +9,10 @@ const logos: { src: string; alt: string }[] = [
   { src: "/logos/tenant-2.jpg", alt: "مجمع بصائر التعليمي" },
   { src: "/logos/tenant-4.jpg", alt: "مجمع منارات لتحفيظ القرآن" },
   { src: "/logos/tenant-6.jpg", alt: "جامع البراء بن مالك" },
-  { src: "/logos/tenant-7.png", alt: "مجمع حلقات جامع الجويعد" },
   { src: "/logos/tenant-3.jpg", alt: "مجمع تعلّم" },
   { src: "/logos/tenant-1.png", alt: "جمعية لتحفيظ القرآن الكريم" },
+
+  { src: "/logos/tenant-7.png", alt: "مجمع حلقات جامع الجويعد" },
   { src: "/logos/tenant-5.png", alt: "جمعية لتحفيظ القرآن الكريم" },
 ];
 
@@ -26,7 +27,7 @@ export function TrustedBy() {
           if (entry.isIntersecting) entry.target.classList.add("is-visible");
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     const elements = ref.current?.querySelectorAll(".animate-on-scroll");
     elements?.forEach((el) => observer.observe(el));

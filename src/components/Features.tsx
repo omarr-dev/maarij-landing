@@ -279,12 +279,7 @@ export function Features() {
                 ref={(el) => { chapterRefs.current[idx] = el; }}
                 className="lg:min-h-[62vh] flex flex-col justify-center py-10 lg:py-8"
               >
-                {/* Inline visual on mobile */}
-                <div className="rv lg:hidden mb-6 rounded-3xl bg-white border border-gray-100 shadow-xl p-5">
-                  <Visual chapterKey={ch.key} language={language} />
-                </div>
-
-                <div className="rv flex items-center gap-3 mb-4" style={{ transitionDelay: "0.08s" }}>
+                <div className="rv flex items-center gap-3 mb-4">
                   <span
                     className="flex items-center justify-center w-9 h-9 rounded-full text-white text-sm font-extrabold"
                     style={{ background: ch.accent }}
@@ -295,8 +290,18 @@ export function Features() {
                     <ch.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <h3 className="rv text-2xl lg:text-4xl font-extrabold text-gray-900 mb-4" style={{ transitionDelay: "0.16s" }}>{t(`features.${ch.key}.title`)}</h3>
-                <p className="rv text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg" style={{ transitionDelay: "0.24s" }}>{t(`features.${ch.key}.desc`)}</p>
+                <h3 className="rv text-2xl lg:text-4xl font-extrabold text-gray-900 mb-4" style={{ transitionDelay: "0.08s" }}>{t(`features.${ch.key}.title`)}</h3>
+                <p className="rv text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg" style={{ transitionDelay: "0.16s" }}>{t(`features.${ch.key}.desc`)}</p>
+
+                {/* Inline visual on mobile — below its own text so the association is clear */}
+                <div className="rv lg:hidden mt-8 rounded-3xl bg-white border border-gray-100 shadow-xl p-5" style={{ transitionDelay: "0.24s" }}>
+                  <Visual chapterKey={ch.key} language={language} />
+                </div>
+
+                {/* Elegant divider between features (mobile only) */}
+                {idx < chapters.length - 1 && (
+                  <div className="lg:hidden mt-12 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+                )}
               </div>
             ))}
           </div>
