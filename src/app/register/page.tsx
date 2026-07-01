@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
@@ -61,6 +61,20 @@ export default function RegisterPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // Plan chosen on the pricing page, carried via ?plan= & ?size=
+  const [plan, setPlan] = useState<string>("free");
+  const [studentLimit, setStudentLimit] = useState<number | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get("plan");
+    const size = params.get("size");
+    if (p) setPlan(p.toLowerCase());
+    if (size) setStudentLimit(parseInt(size, 10) || null);
+  }, []);
+
+  const isPro = plan === "professional";
 
   // Validation functions
   const validateSubdomain = (value: string): boolean => {
@@ -182,7 +196,11 @@ export default function RegisterPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          Plan: plan,
+          StudentLimit: studentLimit,
+        }),
       });
 
       const data = await response.json();
@@ -244,6 +262,24 @@ export default function RegisterPage() {
                   {t("register.pageTitle")}
                 </h1>
                 <p className="text-gray-600">{t("register.pageSubtitle")}</p>
+
+                {/* Chosen plan indicator */}
+                <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-sm font-semibold text-[#8a6d0f]">
+                  <Sparkles className="w-4 h-4" />
+                  {isPro ? (
+                    <span>
+                      {language === "ar"
+                        ? `الباقة الاحترافية${studentLimit ? ` · حتى ${studentLimit} طالب` : ""} · أول شهر مجاناً`
+                        : `Professional plan${studentLimit ? ` · up to ${studentLimit} students` : ""} · first month free`}
+                    </span>
+                  ) : (
+                    <span>
+                      {language === "ar"
+                        ? "الباقة المجانية · حتى 25 طالب"
+                        : "Free plan · up to 25 students"}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-8">

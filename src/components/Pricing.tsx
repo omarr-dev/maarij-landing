@@ -86,7 +86,7 @@ export function Pricing() {
   const ar = language === "ar";
   const tr = (l: Loc) => (ar ? l.ar : l.en);
 
-  const [yearly, setYearly] = useState(true);
+  const [yearly, setYearly] = useState(false);
   const [size, setSize] = useState(sizeTiers[0]);
 
   useEffect(() => {
@@ -203,7 +203,7 @@ export function Pricing() {
                 variant="outline"
                 className="w-full border-2 border-gray-300 text-gray-800 hover:bg-gray-50 font-bold py-6 text-lg"
               >
-                <Link href="/register" className="flex items-center justify-center gap-2">
+                <Link href="/register?plan=free" className="flex items-center justify-center gap-2">
                   {ar ? "ابدأ الآن" : "Start Now"}
                   <Arrow className="w-5 h-5" />
                 </Link>
@@ -223,9 +223,17 @@ export function Pricing() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
-              <h3 className="relative text-2xl font-bold text-white mb-2 text-center mt-2">
+              <h3 className="relative text-2xl font-bold text-white mb-3 text-center mt-2">
                 {ar ? "الاحترافية" : "Professional"}
               </h3>
+
+              {/* First month free badge */}
+              <div className="relative flex justify-center mb-4">
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-[#D4AF37] text-[#3a2f00] rounded-full text-xs font-extrabold shadow-md">
+                  <Gift className="w-3.5 h-3.5" />
+                  {ar ? "أول شهر مجاناً" : "First month free"}
+                </span>
+              </div>
 
               {/* Size selector */}
               <div className="relative flex justify-center gap-1.5 mb-6">
@@ -275,8 +283,11 @@ export function Pricing() {
                 size="lg"
                 className="relative w-full bg-white text-[#0D9488] hover:bg-white/90 font-bold py-6 text-lg shadow-lg hover:scale-[1.02] transition-all"
               >
-                <Link href="/register" className="flex items-center justify-center gap-2">
-                  {ar ? "اشترك الآن" : "Subscribe Now"}
+                <Link
+                  href={`/register?plan=professional&size=${size.id}`}
+                  className="flex items-center justify-center gap-2"
+                >
+                  {ar ? "ابدأ شهرك المجاني" : "Start your free month"}
                   <Arrow className="w-5 h-5" />
                 </Link>
               </Button>
