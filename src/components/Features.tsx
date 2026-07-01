@@ -64,7 +64,7 @@ function Visual({ chapterKey, language }: { chapterKey: string; language: string
           </div>
           <div className="flex items-end gap-1.5 h-20">
             {[45, 70, 55, 85, 60, 95, 75].map((h, i) => (
-              <div key={i} className="flex-1 rounded-t bg-gradient-to-t from-[#0D9488] to-[#34D399]" style={{ height: `${h}%` }} />
+              <div key={i} className="growbar flex-1 rounded-t bg-gradient-to-t from-[#0D9488] to-[#34D399]" style={{ height: `${h}%`, animationDelay: `${0.3 + i * 0.06}s` }} />
             ))}
           </div>
         </div>
@@ -275,15 +275,16 @@ export function Features() {
               <div
                 key={ch.key}
                 data-idx={idx}
+                data-reveal
                 ref={(el) => { chapterRefs.current[idx] = el; }}
                 className="lg:min-h-[62vh] flex flex-col justify-center py-10 lg:py-8"
               >
                 {/* Inline visual on mobile */}
-                <div className="lg:hidden mb-6 rounded-3xl bg-white border border-gray-100 shadow-xl p-5">
+                <div className="rv lg:hidden mb-6 rounded-3xl bg-white border border-gray-100 shadow-xl p-5">
                   <Visual chapterKey={ch.key} language={language} />
                 </div>
 
-                <div className="flex items-center gap-3 mb-4">
+                <div className="rv flex items-center gap-3 mb-4" style={{ transitionDelay: "0.08s" }}>
                   <span
                     className="flex items-center justify-center w-9 h-9 rounded-full text-white text-sm font-extrabold"
                     style={{ background: ch.accent }}
@@ -294,8 +295,8 @@ export function Features() {
                     <ch.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <h3 className="text-2xl lg:text-4xl font-extrabold text-gray-900 mb-4">{t(`features.${ch.key}.title`)}</h3>
-                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">{t(`features.${ch.key}.desc`)}</p>
+                <h3 className="rv text-2xl lg:text-4xl font-extrabold text-gray-900 mb-4" style={{ transitionDelay: "0.16s" }}>{t(`features.${ch.key}.title`)}</h3>
+                <p className="rv text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg" style={{ transitionDelay: "0.24s" }}>{t(`features.${ch.key}.desc`)}</p>
               </div>
             ))}
           </div>
@@ -336,9 +337,9 @@ export function Features() {
         </div>
 
         {/* Extras strip */}
-        <div className="mt-6 lg:mt-8 grid sm:grid-cols-3 gap-4">
-          {extras.map((ex) => (
-            <div key={ex.key} className="flex items-start gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4">
+        <div data-reveal className="mt-6 lg:mt-8 grid sm:grid-cols-3 gap-4">
+          {extras.map((ex, i) => (
+            <div key={ex.key} className="rv flex items-start gap-3 rounded-2xl bg-white border border-gray-100 shadow-sm p-4" style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className={`shrink-0 w-10 h-10 rounded-xl ${ex.iconBg} shadow flex items-center justify-center`}>
                 <ex.icon className="w-5 h-5 text-white" />
               </div>
