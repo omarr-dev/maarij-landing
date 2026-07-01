@@ -20,6 +20,10 @@ const translations = {
     "nav.pricing": "الباقات",
     "nav.cta": "سجّل جمعيتك",
 
+    // Trusted By
+    "trustedBy.title": "جمعيات ومجمّعات تثق بمعارج",
+    "trustedBy.subtitle": "نفخر بخدمة نخبة من دور ومجمّعات تحفيظ القرآن الكريم",
+
     // Hero
     "hero.title": "المنصة الاحترافية لإدارة حلقاتك",
     "hero.subtitle": "نظام متكامل لإدارة حلقات تحفيظ القرآن الكريم بكفاءة عالية وتجربة مستخدم استثنائية",
@@ -150,6 +154,10 @@ const translations = {
     "nav.howItWorks": "How It Works",
     "nav.pricing": "Pricing",
     "nav.cta": "Register Your Association",
+
+    // Trusted By
+    "trustedBy.title": "Trusted by leading Quran associations",
+    "trustedBy.subtitle": "Proud to serve a select group of Quran memorization centers",
 
     // Hero
     "hero.title": "The Professional Platform for Managing Your Circles",

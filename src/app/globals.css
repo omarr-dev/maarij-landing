@@ -167,6 +167,51 @@
   animation: slide-in-left 0.6s ease-out forwards;
 }
 
+/* Logo marquee — track holds two identical copies; shift by exactly one copy */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* NOTE: not named "animate-*" — that namespace is owned by Tailwind v4 utilities. */
+.marquee-track {
+  animation: marquee 40s linear infinite;
+  width: max-content;
+}
+
+/* Pause the loop when the user hovers the row */
+.marquee-group:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Fade the two edges so logos ease in/out instead of hard-cutting */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 /* Intersection Observer animation triggers */
 .animate-on-scroll {
   opacity: 0;
